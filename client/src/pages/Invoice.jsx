@@ -19,7 +19,7 @@ const fetchInvoice=async()=>{
 
 const res = await axios.get(
 
-`http://localhost:5000/api/sales/invoice/${id}`
+`${import.meta.env.VITE_API_URL}/api/sales/invoice/${id}`
 
 );
 

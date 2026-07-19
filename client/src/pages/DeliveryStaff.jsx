@@ -25,7 +25,7 @@ status: "Active"
 const fetchStaff = async () => {
 
 const res = await axios.get(
-"http://localhost:5000/api/delivery-staff"
+"${import.meta.env.VITE_API_URL}/api/delivery-staff"
 );
 
 setStaff(res.data);
@@ -67,7 +67,7 @@ if(editId){
 
 await axios.put(
 
-`http://localhost:5000/api/delivery-staff/${editId}`,
+`${import.meta.env.VITE_API_URL}/api/delivery-staff/${editId}`,
 
 form
 
@@ -81,7 +81,7 @@ setEditId(null);
 
 await axios.post(
 
-"http://localhost:5000/api/delivery-staff",
+"${import.meta.env.VITE_API_URL}/api/delivery-staff",
 
 form
 
@@ -143,7 +143,7 @@ if(!window.confirm("Delete this staff member?")) return;
 
 await axios.delete(
 
-`http://localhost:5000/api/delivery-staff/${id}`
+`${import.meta.env.VITE_API_URL}/api/delivery-staff/${id}`
 
 );
 

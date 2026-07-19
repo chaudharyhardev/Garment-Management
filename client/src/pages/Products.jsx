@@ -33,7 +33,7 @@ const [stockFilter,setStockFilter] = useState("");
   // =========================
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/products");
       setProducts(res.data);
     } catch (err) {
       console.log(err);
@@ -45,7 +45,7 @@ const [stockFilter,setStockFilter] = useState("");
   // =========================
   const fetchGarments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/garments");
+      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/garments");
       setGarments(res.data);
     } catch (err) {
       console.log(err);
@@ -174,7 +174,7 @@ const deleteProduct = async (id) => {
     try {
 
         await axios.delete(
-            `http://localhost:5000/api/products/${id}`
+            `${import.meta.env.VITE_API_URL}/api/products/${id}`
         );
 
 
@@ -218,7 +218,7 @@ const deleteProduct = async (id) => {
      if (editId) {
 
     await axios.put(
-        `http://localhost:5000/api/products/${editId}`,
+        `${import.meta.env.VITE_API_URL}/api/products/${editId}`,
         data,
         {
             headers: {
@@ -232,7 +232,7 @@ const deleteProduct = async (id) => {
 } else {
 
     await axios.post(
-        "http://localhost:5000/api/products",
+        "${import.meta.env.VITE_API_URL}/api/products",
         data,
         {
             headers: {
@@ -624,7 +624,7 @@ Low Stock Only
                   <td className="p-3 border text-center">
                     {product.image ? (
                       <img
-                        src={`http://localhost:5000/uploads/products/${product.image}`}
+                        src={`${import.meta.env.VITE_API_URL}/uploads/products/${product.image}`}
                         alt={product.name}
                         className="w-16 h-16 object-cover rounded mx-auto"
                       />

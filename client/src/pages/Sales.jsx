@@ -32,7 +32,7 @@ payment_method:"Cash"
 const fetchCustomers=async()=>{
 
 const res=await axios.get(
-"http://localhost:5000/api/customers"
+"${import.meta.env.VITE_API_URL}/api/customers"
 );
 
 setCustomers(res.data);
@@ -46,7 +46,7 @@ setCustomers(res.data);
 const fetchProducts=async()=>{
 
 const res=await axios.get(
-"http://localhost:5000/api/products"
+"${import.meta.env.VITE_API_URL}/api/products"
 );
 
 setProducts(res.data);
@@ -57,7 +57,7 @@ const fetchSales=async()=>{
 
 const res=await axios.get(
 
-"http://localhost:5000/api/sales"
+"${import.meta.env.VITE_API_URL}/api/sales"
 
 );
 
@@ -85,7 +85,7 @@ try{
 
 const response = await axios.post(
 
-"http://localhost:5000/api/sales",
+"${import.meta.env.VITE_API_URL}/api/sales",
 
 {
 

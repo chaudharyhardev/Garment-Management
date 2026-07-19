@@ -14,7 +14,7 @@ const [staff, setStaff] = useState([]);
 const fetchDeliveries=async()=>{
 
 const res=await axios.get(
-"http://localhost:5000/api/deliveries"
+"${import.meta.env.VITE_API_URL}/api/deliveries"
 );
 
 setDeliveries(res.data);
@@ -23,7 +23,7 @@ setDeliveries(res.data);
 const fetchStaff = async () => {
 
     const res = await axios.get(
-        "http://localhost:5000/api/delivery-staff"
+        "${import.meta.env.VITE_API_URL}/api/delivery-staff"
     );
 
     setStaff(res.data);
@@ -46,7 +46,7 @@ const updateStatus=async(id,status)=>{
 
 await axios.put(
 
-`http://localhost:5000/api/deliveries/${id}/status`,
+`${import.meta.env.VITE_API_URL}/api/deliveries/${id}/status`,
 
 {
 status
@@ -66,7 +66,7 @@ const updatePerson = async(id, delivery_person)=>{
 
     await axios.put(
 
-        `http://localhost:5000/api/deliveries/${id}/person`,
+        `${import.meta.env.VITE_API_URL}/api/deliveries/${id}/person`,
 
         {
             delivery_person
