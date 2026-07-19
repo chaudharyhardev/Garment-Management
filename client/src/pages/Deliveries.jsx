@@ -13,18 +13,17 @@ const [staff, setStaff] = useState([]);
 
 const fetchDeliveries=async()=>{
 
-const res=await axios.get(
-"${import.meta.env.VITE_API_URL}/api/deliveries"
+const res = await axios.get(
+`${import.meta.env.VITE_API_URL}/api/deliveries`
 );
-
 setDeliveries(res.data);
 
 };
 const fetchStaff = async () => {
 
-    const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/delivery-staff"
-    );
+const res = await axios.get(
+`${import.meta.env.VITE_API_URL}/api/delivery-staff`
+);
 
     setStaff(res.data);
 

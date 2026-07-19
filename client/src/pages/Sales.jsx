@@ -31,8 +31,8 @@ payment_method:"Cash"
 
 const fetchCustomers=async()=>{
 
-const res=await axios.get(
-"${import.meta.env.VITE_API_URL}/api/customers"
+const res = await axios.get(
+`${import.meta.env.VITE_API_URL}/api/customers`
 );
 
 setCustomers(res.data);
@@ -45,8 +45,8 @@ setCustomers(res.data);
 
 const fetchProducts=async()=>{
 
-const res=await axios.get(
-"${import.meta.env.VITE_API_URL}/api/products"
+const res = await axios.get(
+`${import.meta.env.VITE_API_URL}/api/products`
 );
 
 setProducts(res.data);
@@ -55,10 +55,8 @@ setProducts(res.data);
 
 const fetchSales=async()=>{
 
-const res=await axios.get(
-
-"${import.meta.env.VITE_API_URL}/api/sales"
-
+const res = await axios.get(
+`${import.meta.env.VITE_API_URL}/api/sales`
 );
 
 setSales(res.data);
@@ -85,7 +83,7 @@ try{
 
 const response = await axios.post(
 
-"${import.meta.env.VITE_API_URL}/api/sales",
+`${import.meta.env.VITE_API_URL}/api/sales`,
 
 {
 

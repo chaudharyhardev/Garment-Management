@@ -41,10 +41,8 @@ const fetchDashboardStats = async()=>{
     try{
 
         const res = await axios.get(
-
-            "${import.meta.env.VITE_API_URL}/api/dashboard/stats"
-
-        );
+`${import.meta.env.VITE_API_URL}/api/dashboard/stats`
+);
 
         setStats(res.data);
 
@@ -63,8 +61,8 @@ const fetchRecentSales = async () => {
     try {
 
         const res = await axios.get(
-            "${import.meta.env.VITE_API_URL}/api/dashboard/recent-sales"
-        );
+`${import.meta.env.VITE_API_URL}/api/dashboard/recent-sales`
+);
 
         setRecentSales(res.data);
 
@@ -81,8 +79,8 @@ const fetchLowStockProducts = async () => {
     try {
 
         const res = await axios.get(
-            "${import.meta.env.VITE_API_URL}/api/dashboard/low-stock"
-        );
+`${import.meta.env.VITE_API_URL}/api/dashboard/low-stock`
+);
 
         setLowStockProducts(res.data);
 
@@ -99,8 +97,8 @@ const fetchMonthlySales = async () => {
     try {
 
         const res = await axios.get(
-            "${import.meta.env.VITE_API_URL}/api/dashboard/monthly-sales"
-        );
+`${import.meta.env.VITE_API_URL}/api/dashboard/monthly-sales`
+);
 
         setMonthlySales(res.data);
 
@@ -117,9 +115,8 @@ const fetchTopProducts = async () => {
     try {
 
         const res = await axios.get(
-            "${import.meta.env.VITE_API_URL}/api/dashboard/top-products"
-        );
-
+`${import.meta.env.VITE_API_URL}/api/dashboard/top-products`
+);
         setTopProducts(res.data);
 
     } catch (err) {

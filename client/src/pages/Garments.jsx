@@ -24,7 +24,7 @@ const fetchGarments = async()=>{
     try{
 
         const res = await axios.get(
-            "${import.meta.env.VITE_API_URL}/api/garments"
+            `${import.meta.env.VITE_API_URL}/api/garments`
         );
 
         setGarments(res.data);
@@ -72,7 +72,7 @@ e.preventDefault();
 try{
 
 await axios.post(
-"${import.meta.env.VITE_API_URL}/api/garments",
+`${import.meta.env.VITE_API_URL}/api/garments`,
 form
 );
 

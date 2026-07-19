@@ -33,7 +33,7 @@ const [stockFilter,setStockFilter] = useState("");
   // =========================
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/products");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/products`);
       setProducts(res.data);
     } catch (err) {
       console.log(err);
@@ -45,7 +45,7 @@ const [stockFilter,setStockFilter] = useState("");
   // =========================
   const fetchGarments = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/garments");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/garments`);
       setGarments(res.data);
     } catch (err) {
       console.log(err);
@@ -232,7 +232,7 @@ const deleteProduct = async (id) => {
 } else {
 
     await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/products",
+        `${import.meta.env.VITE_API_URL}/api/products`,
         data,
         {
             headers: {

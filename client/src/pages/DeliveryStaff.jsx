@@ -25,7 +25,7 @@ status: "Active"
 const fetchStaff = async () => {
 
 const res = await axios.get(
-"${import.meta.env.VITE_API_URL}/api/delivery-staff"
+`${import.meta.env.VITE_API_URL}/api/delivery-staff`
 );
 
 setStaff(res.data);
@@ -81,7 +81,7 @@ setEditId(null);
 
 await axios.post(
 
-"${import.meta.env.VITE_API_URL}/api/delivery-staff",
+`${import.meta.env.VITE_API_URL}/api/delivery-staff`,
 
 form
 
