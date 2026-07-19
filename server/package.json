@@ -17,5 +17,5 @@
   "devDependencies": {
     "nodemon": "^3.1.14"
   },
-  "description": ""
+  "description": "GIOMS Backend"
 }
