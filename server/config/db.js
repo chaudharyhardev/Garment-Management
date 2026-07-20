@@ -19,12 +19,15 @@
 // module.exports = db;
 
 const sqlite3 = require("sqlite3").verbose();
+const path = require("path");
 
-const db = new sqlite3.Database(":memory:", (err) => {
+const dbPath = path.join(__dirname, "..", "database", "database.db");
+
+const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.log(err.message);
     } else {
-        console.log("Memory database connected");
+        console.log("Database connected");
     }
 });
 
